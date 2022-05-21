@@ -1,12 +1,11 @@
 import React from 'react';
 import DefaultPage from '../templates/DefaultPage';
-import Form from '../components/Form';
+import RegisterForm from '../components/RegisterForm';
 
 const Register = () => {
   return (
     <DefaultPage>
-      <h1>Register</h1>
-      <Form element="register" />
+      <RegisterForm element="register" />
     </DefaultPage>
   );
 };

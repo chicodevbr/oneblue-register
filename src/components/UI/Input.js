@@ -1,10 +1,10 @@
 import React from 'react';
-import { InputContainer, InputStyle, Label } from '../../style/InputStyle';
+import { InputStyle, Label } from '../../style/InputStyle';
 
 const Input = (props) => {
   return (
-    <InputContainer>
-      <Label htmlFor={props.id}>{props.label}</Label>
+    <Label htmlFor={props.id}>
+      {props.label}
 
       <InputStyle
         id={props.id}
@@ -17,7 +17,7 @@ const Input = (props) => {
         style={props.style}
         size={props.size}
       />
-    </InputContainer>
+    </Label>
   );
 };
 
