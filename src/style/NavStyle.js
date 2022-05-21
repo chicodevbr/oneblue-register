@@ -40,3 +40,7 @@ export const Menu = styled.div`
   align-items: center;
   position: relative;
 `;
+
+export const LogoutButton = styled.span`
+  cursor: pointer;
+`;

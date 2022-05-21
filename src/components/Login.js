@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { ErrorMessage, Formik } from 'formik';
 import * as yup from 'yup';
 import Avatar, { genConfig } from 'react-nice-avatar';
@@ -11,11 +11,15 @@ import { ButtonContainer } from '../style/ButtonStyle';
 import Button from './UI/Button';
 import FooterForm from './FooterForm';
 import { ErrorMessageForm, InputContainer } from '../style/InputStyle';
+import AuthContext from '../store/auth-context';
 
 const avatarConfigWoman = genConfig(configMan);
 
-const Login = (props) => {
-  const handleSendSubmit = () => {};
+const Login = () => {
+  const authCtx = useContext(AuthContext);
+  const handleSendSubmit = (values) => {
+    authCtx.onLogin(values);
+  };
 
   return (
     <Card>
@@ -27,7 +31,7 @@ const Login = (props) => {
         validationSchema={loginSchema}
         onSubmit={handleSendSubmit}
       >
-        {({ values, handleChange, handleSubmit, resetForm }) => (
+        {({ values, handleChange, handleSubmit }) => (
           <FormStyle onSubmit={handleSubmit}>
             <AvatarContainer>
               <Avatar
@@ -55,9 +59,8 @@ const Login = (props) => {
             </InputContainer>
 
             <ButtonContainer>
-              <Button>Cancel</Button>
               <Button primary="primary" type="submit">
-                Submit
+                Login
               </Button>
             </ButtonContainer>
           </FormStyle>

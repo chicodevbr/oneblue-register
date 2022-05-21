@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { ErrorMessage, Formik } from 'formik';
 import * as yup from 'yup';
 import Avatar, { genConfig } from 'react-nice-avatar';
@@ -11,13 +11,24 @@ import { ButtonContainer } from '../style/ButtonStyle';
 import Button from './UI/Button';
 import FooterForm from './FooterForm';
 import { ErrorMessageForm, InputContainer } from '../style/InputStyle';
+import AuthContext from '../store/auth-context';
+import { useNavigate } from 'react-router-dom';
 
 const avatarConfigWoman = genConfig(configWoman);
 
 const RegisterForm = () => {
+  const authCtx = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const handleSendSubmit = (values) => {
-    console.log(values);
+    authCtx.onSignup(values);
   };
+
+  useEffect(() => {
+    if (authCtx.isLoggedIn) {
+      navigate('/');
+    }
+  }, [authCtx.isLoggedIn, navigate]);
 
   return (
     <Card>
@@ -69,9 +80,8 @@ const RegisterForm = () => {
               />
             </InputContainer>
             <ButtonContainer>
-              <Button>Cancel</Button>
               <Button primary="primary" type="submit">
-                Send
+                Sign up
               </Button>
             </ButtonContainer>
           </FormStyle>

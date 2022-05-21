@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import Login from '../components/Login';
 import Welcome from '../components/Welcome';
+import AuthContext from '../store/auth-context';
 import DefaultPage from '../templates/DefaultPage';
 
 const Home = () => {
-  const [logged, setLogged] = useState(false);
+  const authCtx = useContext(AuthContext);
 
   let content;
 
-  if (logged) {
+  if (authCtx.isLoggedIn) {
     content = <Welcome />;
   } else {
     content = <Login />;
