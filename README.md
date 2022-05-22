@@ -19,4 +19,4 @@ A url base da API deve ser informada em arquivo .env.
 ### `npm start`
 
 Para rodar a aplicação em modo de desenvoldimento.
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Abra [http://localhost:3000](http://localhost:3000) para ver o app no browser.
