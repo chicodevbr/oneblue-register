@@ -33,3 +33,39 @@ export const configMan = {
   shirtColor: '#F4D150',
   bgColor: 'linear-gradient(45deg, #56b5f0 0%, #45ccb5 100%)',
 };
+
+export const configWoman2 = {
+  sex: 'woman',
+  faceColor: '#AC6651',
+  earSize: 'big',
+  eyeStyle: 'oval',
+  noseStyle: 'short',
+  mouthStyle: 'peace',
+  shirtStyle: 'polo',
+  glassesStyle: 'square',
+  hairColor: '#D2EFF3',
+  hairStyle: 'normal',
+  hatStyle: 'none',
+  hatColor: '#D2EFF3',
+  eyeBrowStyle: 'upWoman',
+  shirtColor: '#FC909F',
+  bgColor: '#506AF4',
+};
+
+export const configPunk = {
+  sex: 'man',
+  faceColor: '#F9C9B6',
+  earSize: 'big',
+  eyeStyle: 'oval',
+  noseStyle: 'round',
+  mouthStyle: 'smile',
+  shirtStyle: 'hoody',
+  glassesStyle: 'square',
+  hairColor: '#000',
+  hairStyle: 'mohawk',
+  hatStyle: 'none',
+  hatColor: '#D2EFF3',
+  eyeBrowStyle: 'up',
+  shirtColor: '#6BD9E9',
+  bgColor: 'linear-gradient(45deg, #56b5f0 0%, #45ccb5 100%)',
+};

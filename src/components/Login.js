@@ -20,6 +20,15 @@ const Login = () => {
   const handleSendSubmit = (values) => {
     authCtx.onLogin(values);
   };
+  let content;
+
+  if (authCtx.error === 'Request failed with status code 404') {
+    content = (
+      <ErrorMessageForm>
+        User not found. Please try again or create an account.
+      </ErrorMessageForm>
+    );
+  }
 
   return (
     <Card>
@@ -48,6 +57,7 @@ const Login = () => {
                 onChange={handleChange}
               />
               <ErrorMessage component={ErrorMessageForm} name="name" />
+              {content}
               <Input
                 label="Password"
                 type="password"

@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Login from '../components/Login';
 import Welcome from '../components/Welcome';
 import AuthContext from '../store/auth-context';
+
 import DefaultPage from '../templates/DefaultPage';
 
 const Home = () => {
@@ -14,7 +15,6 @@ const Home = () => {
   } else {
     content = <Login />;
   }
-
   return <DefaultPage>{content}</DefaultPage>;
 };
 

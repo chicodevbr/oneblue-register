@@ -1,10 +1,13 @@
 import React from 'react';
+import { Container } from '../style/GreetingsStyle';
+import Greetings from './Greetings';
 
 const Welcome = () => {
   return (
-    <div>
+    <Container>
       <h1>Welcome to OneBlue</h1>
-    </div>
+      <Greetings />
+    </Container>
   );
 };
 

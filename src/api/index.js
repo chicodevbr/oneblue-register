@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+//A URL Base deve ser adicionada em um arquivo .env
+const BASE_URL = process.env.REACT_APP_URL_BASE;
+
 const axiosClient = axios.create();
 
 axiosClient.defaults.headers = {
@@ -12,7 +15,7 @@ export function postRequest(URL, payload) {
 }
 
 export const url = {
-  base: 'http://localhost:4000',
+  base: BASE_URL,
 };
 
 export const endpoint = {
