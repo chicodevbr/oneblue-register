@@ -13,6 +13,7 @@ export const Nav = styled.nav`
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 `;
 
 export const MenuLink = styled(NavLink)`
@@ -39,6 +40,29 @@ export const Menu = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  @media (max-width: 768px) {
+    overflow: hidden;
+    flex-direction: column;
+    max-height: ${({ isOpen }) => (isOpen ? '300px' : '0')};
+    transition: max-height 0.3s ease-in;
+    width: 100%;
+  }
+`;
+
+export const MenuHamburger = styled.div`
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  span {
+    height: 2px;
+    width: 25px;
+    background: var(--primary);
+    margin-bottom: 4px;
+    border-radius: 5px;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const LogoutButton = styled.span`
