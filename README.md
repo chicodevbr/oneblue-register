@@ -4,13 +4,13 @@ Este projeto foi desenvolvido para um teste técnico da OneBlue. O desafio propo
 
 ## Tecnologias usadas
 
-[react](https://pt-br.reactjs.org/)
-[react-router-dom](https://www.npmjs.com/package/react-router-dom)
-[styled-components](https://styled-components.com/)
-[formik](https://formik.org/docs/overview)
-[yup](https://github.com/jquense/yup)
-[axios](https://axios-http.com/ptbr/docs/intro)
-[react-nice-avatar](https://github.com/dapilab/react-nice-avatar)
+- [react](https://pt-br.reactjs.org/)
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [styled-components](https://styled-components.com/)
+- [formik](https://formik.org/docs/overview)
+- [yup](https://github.com/jquense/yup)
+- [axios](https://axios-http.com/ptbr/docs/intro)
+- [react-nice-avatar](https://github.com/dapilab/react-nice-avatar)
 
 ### `.env`
 
